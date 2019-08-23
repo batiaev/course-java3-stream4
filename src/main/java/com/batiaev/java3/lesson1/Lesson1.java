@@ -34,7 +34,6 @@ public class Lesson1 {
             }
         };
         iterable.forEach(action2);
-        e
 //        iterable.forEach((Double action1) -> {
 //
 //        });
