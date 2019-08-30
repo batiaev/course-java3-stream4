@@ -13,7 +13,7 @@ public class Homework {
     public static void main(String[] args) {
         createFiles();
 //        task1();
-//        task2();
+        task2();
 //        task3();
     }
 
@@ -42,8 +42,7 @@ public class Homework {
 
             int c;
             int available = seq.available();
-            while (seq.available() > 0) {
-                c = seq.read();
+            while ((c = seq.read()) > 0) {
                 all.write(c);
             }
             seq.close();
@@ -101,17 +100,22 @@ public class Homework {
             }
             //
             for (int i = 0; i < 100; i++) {
-                outTask2_1.write(i);
-                outTask2_1.flush();
-                outTask2_2.write(i);
-                outTask2_2.flush();
-                outTask2_3.write(i);
-                outTask2_3.flush();
-                outTask2_4.write(i);
-                outTask2_4.flush();
-                outTask2_5.write(i);
-                outTask2_5.flush();
+                outTask2_1.write("A" + i);
+                outTask2_2.write("B" + i);
+                outTask2_3.write("C" + i);
+                outTask2_4.write("D" + i);
+                outTask2_5.write("E" + i);
             }
+            outTask2_1.write(System.lineSeparator());
+            outTask2_2.write(System.lineSeparator());
+            outTask2_3.write(System.lineSeparator());
+            outTask2_4.write(System.lineSeparator());
+            outTask2_5.write(System.lineSeparator());
+            outTask2_1.flush();
+            outTask2_2.flush();
+            outTask2_3.flush();
+            outTask2_4.flush();
+            outTask2_5.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
