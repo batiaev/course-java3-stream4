@@ -41,8 +41,8 @@ public class Homework {
             SequenceInputStream seq = new SequenceInputStream(e);
 
             int c;
-            int available = seq.available();
-            while ((c = seq.read()) > 0) {
+            System.out.println("Available = " + seq.available());
+            while ((c = seq.read()) != -1) {
                 all.write(c);
             }
             seq.close();
