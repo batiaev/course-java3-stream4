@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.function.Consumer;
 
 /**
  * Controller
@@ -19,6 +20,10 @@ public class Controller {
     private final static ExecutorService executorService =
             Executors.newFixedThreadPool(list.size());
 
+    public static List<String> getValues() {
+        return list;
+    }
+
     String getCurrent() {
         return list.get(pos);
     }
@@ -31,7 +36,8 @@ public class Controller {
         Controller controller = new Controller();
         for (String symbol : list) {
             executorService.execute(
-                    new TextPrinter(symbol, COUNT, controller, System.out::print));
+                    new TextPrinter(symbol, COUNT, controller,
+                            System.out::print));
         }
     }
 
