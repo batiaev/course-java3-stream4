@@ -8,13 +8,13 @@ import java.util.Scanner;
 
 public class Homework {
     private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(Homework.class);
-    private static File file = new File("src/main/resources/task3.txt");
+    private static File file = new File("src/main/resources/process.txt");
 
     public static void main(String[] args) {
         createFiles();
 //        task1();
         task2();
-//        task3();
+//        process();
     }
 
     private static void task1() {

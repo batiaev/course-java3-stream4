@@ -1,7 +1,5 @@
 package com.batiaev.java3.lesson3;
 
-import sun.nio.fs.UnixFileSystemProvider;
-
 import java.io.*;
 import java.nio.file.Path;
 import java.util.Scanner;
@@ -20,9 +18,6 @@ public class Lesson3 implements Serializable {
 //        System.out.println(file.getAbsolutePath());
 //        System.out.println(file.getCanonicalPath());
 //        System.out.println(file.getPath());
-
-
-
 
 
 //        file();
