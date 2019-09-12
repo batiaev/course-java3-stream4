@@ -16,6 +16,19 @@ import static java.lang.Math.sin;
 public class Lesson6 {
     private static final Logger log = LoggerFactory.getLogger(Lesson6.class);
 
+    private static int summa(int value1, int value2) {
+        log.error("error");
+        log.warn("warn");
+        log.info("info");
+        log.debug("debug");
+        log.trace("trace");
+        final int result = value1 + value2;
+        log.debug("{} + {} = {}", value1, value2, result);
+        return result;
+    }
+
+
+
     private String name;
     private double amount;
 
@@ -29,18 +42,19 @@ public class Lesson6 {
 
     public static void main(String[] args) {
 
-        final MyCustomAnnotation annotation =
-                Lesson6.class.getAnnotation(MyCustomAnnotation.class);
-        System.out.println(annotation.name() + " " + annotation.value());
+//        final MyCustomAnnotation annotation =
+//                Lesson6.class.getAnnotation(MyCustomAnnotation.class);
+//        System.out.println(annotation.name() + " " + annotation.value());
 
-//        example();
+//        int result = summa(3, 6);
+        example();
     }
 
     private static void example() {
 
         log.info("exec main method");
         int value = 42;
-        log.warn("Unexpected value = "+ 42);
+        log.warn("Unexpected value = " + 42);
         log.warn(String.format("Unexpected value = %s", 42));
         log.warn("Unexpected value = {}, but expected value is {}", 42, 13);
 
@@ -69,8 +83,9 @@ public class Lesson6 {
     public long sum(int val1, int val2) {
         return val1 + val2;
     }
+
     public double divide(int val1, int val2) {
-        return val1  / val2;
+        return val1 / val2;
     }
 }
 

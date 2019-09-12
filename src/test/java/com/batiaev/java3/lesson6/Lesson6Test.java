@@ -45,8 +45,10 @@ public class Lesson6Test {
     @Test(timeout = 1000)
     public void sum() {
         final long sum = lesson6.sum(2, 3);
+        double sum2 = sum;
         assertNotNull(lesson6);
         Assert.assertEquals(5, sum);
+        Assert.assertEquals(5.0, sum2, 0.001);
         assertTrue(sum > 0);
         System.out.println("sum");
     }
